@@ -130,4 +130,41 @@ public class Controlador implements ActionListener{
 
 [Livro Engenharia de Software - Padrões de Projeto](https://engsoftmoderna.info/cap6.html)
 
-[Padrões de Projeto Guru](https://engsoftmoderna.info/cap6.html)
+[Padrões de Projeto Guru](https://refactoring.guru/design-patterns)
+
+
+## Aula 25/08
+
+[Padrões de Projeto Guru - Implementação Observer](https://refactoring.guru/design-patterns/observer)
+
+## Aula 26/08
+
+[Fundamentos da Arquitetura de Software - Introdução](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/18[%3Bvnd.vst.idref%3Dcap1.xhtml]!/4)
+
+- Definir Introdução a arquitetura (características, princípios e decisões)
+
+## Aula 01/09
+
+[Fundamentos da Arquitetura de Software - Introdução](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/18[%3Bvnd.vst.idref%3Dcap1.xhtml]!/4)
+
+- Expectativas de um arquiteto
+- Decisões de arquitetura
+- Analisar continuamento a arquitetura
+- Manter-se atualizado
+- Domínio do negócio
+- DevOps
+  
+[Introdução a DevOps](https://learn.microsoft.com/pt-br/training/modules/introduction-to-devops/2-what-is-devops?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.az-400-work-git-for-enterprise-devops)
+
+## Aula 02/09
+
+[Fundamentos da Arquitetura de Software - Pensamento Arquitetônico](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/22%5B%3Bvnd.vst.idref%3Dcap2.xhtml%5D!/4)
+
+- Resuma a diferençca entre: Arquitetura e Design
+- Como é a formação do conhecimento de um arquiteto modelo T?
+
+## Aula 08/09
+
+[Fundamentos da Arquitetura de Software - Análise de Trade-offs](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/22%5B%3Bvnd.vst.idref%3Dcap2.xhtml%5D!/4/2/58%5Bsigil_toc_id_24%5D/1:22%5B-of%2Cfs%5D)
+
+

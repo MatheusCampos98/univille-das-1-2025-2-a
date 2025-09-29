@@ -84,18 +84,6 @@ Regras práticas: um método deve chamar apenas métodos da própria classe, de 
 Problema evitado: train wrecks (chamadas encadeadas como pedido.getCliente().getEndereco().getCidade()), que aumentam o acoplamento.
 
 --------------------------------------------------
-Composição vs. Herança
-
-Herança: usada quando há uma relação “é um” (is a). Ex.: Gato é um Animal.
-
-Composição: usada quando a relação é “tem um” (has a). Ex.: Carro tem um Motor.
-
-Boas práticas:
-
-Prefira composição para maior flexibilidade e reuso.
-
-Use herança apenas quando realmente existir uma hierarquia clara.
-
 UML (Unified Modeling Language)
 
 Linguagem de modelagem para representar graficamente sistemas e suas interações.
@@ -116,6 +104,7 @@ Associação (seta cheia) – classes se relacionam.
 
 Implementação (seta pontilhada vazada) – uma classe implementa uma interface.
 
+--------------------------------------------------
 Arquitetura de Software
 
 Abrange decisões de alto nível sobre a estrutura e organização do sistema.
@@ -134,26 +123,7 @@ Arquitetura: visão ampla, decisões estruturais e tecnológicas.
 
 Design: detalhamento técnico da implementação.
 
-Papel do Arquiteto
-
-Responsável por garantir que o sistema atenda aos requisitos de negócio e técnicos.
-
-Atividades-chave:
-
-Tomar decisões estratégicas sobre tecnologias, padrões e infraestrutura.
-
-Assegurar conformidade com boas práticas e normas.
-
-Monitorar continuamente a saúde do sistema.
-
-Dialogar com POs, desenvolvedores e stakeholders.
-
-Arquiteto em T:
-
-Base Horizontal: conhecimento amplo em múltiplas tecnologias.
-
-Vertical Profunda: especialização em uma área (ex.: cloud, segurança, data).
-
+--------------------------------------------------
 DevOps
 
 Cultura e conjunto de práticas que integram desenvolvimento (Dev) e operações (Ops) para entregar software com mais agilidade e qualidade.
@@ -168,6 +138,7 @@ Mais qualidade e confiabilidade.
 
 Automação de builds, testes e deploys (CI/CD).
 
+--------------------------------------------------
 Comunicação Assíncrona
 
 Permite a interação entre serviços de forma desacoplada e não bloqueante.
@@ -190,6 +161,7 @@ Ex.: AWS SQS, Azure Service Bus.
 
 Fan-out: uma mensagem é copiada para vários consumidores em paralelo.
 
+--------------------------------------------------
 Débito Técnico
 
 Compromissos ou atalhos tomados durante o desenvolvimento para ganhar velocidade, que geram custo futuro.

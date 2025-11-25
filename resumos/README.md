@@ -1,179 +1,148 @@
-# das-1-2025-2-a
-
---------------------------------------------------
 Abstração
 
-É o processo de modelar problemas do mundo real em um sistema, destacando apenas as características essenciais e ignorando detalhes irrelevantes.
+Abstração é o processo de modelar problemas do mundo real em um sistema, destacando apenas as características essenciais e ignorando detalhes irrelevantes. O objetivo da abstração é facilitar o entendimento, reduzir a complexidade e permitir que o desenvolvedor trabalhe com conceitos mais próximos da lógica de negócio.
 
-Objetivo: facilitar o entendimento, reduzir a complexidade e permitir que o desenvolvedor trabalhe com conceitos mais próximos da lógica do negócio.
+Exemplo: em um sistema bancário, ao criar a classe Conta, não é necessário representar cada detalhe físico do cliente, apenas dados relevantes como saldo, operações e histórico de transações. A abstração permite que o desenvolvedor foque no que realmente importa para o funcionamento do sistema, sem se preocupar com a implementação interna de cada classe.
 
-Exemplo: em um sistema bancário, ao criar a classe Conta, não é necessário representar cada detalhe físico do cliente, apenas dados relevantes como saldo e operações.
+Benefícios:
 
-Benefício: aumenta a clareza do código e a flexibilidade para mudanças.
+Aumenta a clareza do código.
+
+Facilita mudanças no sistema, pois detalhes irrelevantes são escondidos.
+
+Melhora a manutenção e evolução do sistema, pois é mais fácil modificar ou estender a funcionalidade sem afetar outras partes do código.
 
 --------------------------------------------------
-Ocultamento de Informação (Encapsulamento)
+Encapsulamento (Ocultamento de Informações)
 
-Prática de esconder os detalhes internos da implementação, expondo apenas interfaces ou métodos necessários para uso externo.
-
-Como funciona: atributos privados + métodos de acesso controlados (getters e setters).
+Encapsulamento é a prática de esconder os detalhes internos de implementação e expor apenas as interfaces ou métodos necessários para o uso externo. Isso é feito com a utilização de atributos privados e métodos de acesso controlados (como getters e setters).
 
 Vantagens:
 
-Protege a integridade dos dados.
-Reduz o risco de erros ao impedir acesso direto a variáveis internas.
-Permite alterar a implementação sem impactar quem utiliza a classe.
+Protege a integridade dos dados, reduzindo o risco de erros causados pelo acesso direto aos atributos.
 
-Exemplo: uma classe Conta pode permitir operações de depósito e saque, mas não o acesso direto ao saldo.
+Permite alterar a implementação interna sem impactar o código que usa a classe.
+
+Melhora a segurança e o controle sobre a forma como os dados são manipulados.
+
+Exemplo: em uma classe Conta, o saldo do cliente pode ser um atributo privado, e as operações de depósito e saque são feitas por meio de métodos controlados, evitando o acesso direto ao saldo.
 
 --------------------------------------------------
+
 Coesão
 
-Mede o quanto os métodos e atributos de uma classe ou módulo estão focados em um único propósito.
-
-Alta coesão: cada classe tem uma única responsabilidade, seguindo o Single Responsibility Principle.
-
-Baixa coesão: a classe realiza tarefas distintas, tornando o código difícil de entender e manter.
+Coesão mede o grau em que os métodos e atributos de uma classe estão focados em um único propósito. Uma classe com alta coesão tem uma única responsabilidade e é fácil de entender e manter. Já uma classe com baixa coesão realiza tarefas distintas, tornando o código mais difícil de entender e mais suscetível a erros.
 
 Benefícios:
 
-Facilita a reutilização.
+Facilita a reutilização de código.
 
-Reduz o impacto de mudanças.
-Melhora a testabilidade.
+Reduz o impacto de mudanças, pois as alterações em uma classe coesa geralmente não afetam outras partes do sistema.
+
+Melhora a testabilidade, pois a classe tem uma responsabilidade bem definida.
 
 --------------------------------------------------
+
 Acoplamento
 
-É o grau de dependência entre módulos, classes ou componentes.
+Acoplamento refere-se ao grau de dependência entre módulos, classes ou componentes. A relação entre eles pode ser:
 
-Baixo acoplamento: classes interagem por meio de abstrações ou interfaces → facilita manutenção e evolução.
+Baixo acoplamento: classes interagem por meio de abstrações ou interfaces, facilitando a manutenção e a evolução do sistema.
 
-Alto acoplamento: mudanças em uma classe podem quebrar várias outras.
+Alto acoplamento: mudanças em uma classe podem quebrar várias outras, o que torna o sistema mais rígido e difícil de modificar.
 
-Boas práticas para reduzir acoplamento:
+Boas práticas para reduzir o acoplamento:
 
 Uso de interfaces e injeção de dependência.
 
-Seguir o princípio de Dependency Inversion.
+Seguir o princípio de Dependency Inversion (Princípio da Inversão de Dependência).
 
-Comunicação por eventos ou mensagens.
+Utilizar comunicação por eventos ou mensagens.
 
 --------------------------------------------------
+
 SOLID
 
-Conjunto de princípios para criar código limpo, sustentável e flexível:
+SOLID é um conjunto de princípios que visa tornar o código mais limpo, organizado, coeso e desacoplado. Cada letra de SOLID representa um princípio:
 
-S – Single Responsibility Principle: uma classe deve ter apenas um motivo para mudar (uma única responsabilidade).
+S - Single Responsibility Principle (Princípio da Responsabilidade Única): Uma classe deve ter apenas um motivo para mudar (ou seja, uma única responsabilidade).
 
-O – Open/Closed Principle: sistemas devem estar abertos para extensão, mas fechados para modificação. Novas funcionalidades devem ser adicionadas sem alterar o código existente.
+O - Open/Closed Principle (Princípio Aberto/Fechado): O código deve ser aberto para extensão, mas fechado para modificação. Isso permite adicionar novas funcionalidades sem alterar o código existente, prevenindo a introdução de bugs.
 
-L – Liskov Substitution Principle: subclasses devem poder substituir a classe base sem alterar o comportamento esperado do sistema.
+L - Liskov Substitution Principle (Princípio da Substituição de Liskov): Objetos de classes derivadas devem poder substituir objetos da classe base sem alterar o comportamento esperado do sistema.
 
-I – Interface Segregation Principle: interfaces devem ser específicas e pequenas, evitando obrigar classes a implementar métodos que não utilizam.
+I - Interface Segregation Principle (Princípio da Segregação de Interface): Interfaces devem ser específicas e pequenas, evitando obrigar classes a implementar métodos que não utilizam.
 
-D – Dependency Inversion Principle: módulos de alto nível devem depender de abstrações, não de implementações concretas.
-
---------------------------------------------------
-Princípio de Demeter (Lei do Menor Conhecimento)
-
-Cada classe deve conhecer e interagir apenas com o que é necessário para executar sua tarefa.
-
-Regras práticas: um método deve chamar apenas métodos da própria classe, de parâmetros recebidos, de objetos criados localmente ou de seus atributos.
-
-Problema evitado: train wrecks (chamadas encadeadas como pedido.getCliente().getEndereco().getCidade()), que aumentam o acoplamento.
+D - Dependency Inversion Principle (Princípio da Inversão de Dependência): Módulos de alto nível devem depender de abstrações, e não de implementações concretas. Isso aumenta a flexibilidade do sistema e facilita as mudanças.
 
 --------------------------------------------------
-UML (Unified Modeling Language)
 
-Linguagem de modelagem para representar graficamente sistemas e suas interações.
+Princípio de Demeter
 
-Principais diagramas:
+O Princípio de Demeter (ou Lei do Menor Conhecimento) estabelece que cada classe deve conhecer e interagir apenas com o que é necessário para executar sua tarefa. Em termos práticos, um método de uma classe deve interagir somente com:
 
-Diagrama de Classes: estrutura e relacionamentos entre classes.
+Métodos da própria classe.
+Métodos de objetos passados como parâmetros.
+Métodos de objetos criados localmente.
+Métodos de atributos da própria classe.
 
-Diagrama de Sequência: ordem de mensagens entre objetos.
-
-Diagrama de Casos de Uso: funcionalidades do sistema e atores envolvidos.
-
-Relacionamentos:
-
-Herança (seta vazada) – uma classe herda de outra.
-
-Associação (seta cheia) – classes se relacionam.
-
-Implementação (seta pontilhada vazada) – uma classe implementa uma interface.
+Exemplo de violação do princípio: pedido.getCliente().getEndereco().getCidade() é um exemplo clássico de "train wreck" (cadeia de chamadas), que aumenta o acoplamento entre as classes e dificulta a manutenção.
 
 --------------------------------------------------
+
 Arquitetura de Software
 
-Abrange decisões de alto nível sobre a estrutura e organização do sistema.
+A arquitetura de software trata das decisões de alto nível sobre a estrutura e organização do sistema. Envolve a definição de características arquiteturais (requisitos não funcionais), como desempenho, escalabilidade, segurança, manutenibilidade e observabilidade.
 
-Características Arquiteturais (Requisitos Não Funcionais): desempenho, escalabilidade, disponibilidade, segurança, manutenibilidade, observabilidade e custo.
+Decisões de Arquitetura: São as escolhas que moldam o sistema, como a definição de padrões (monólito, microsserviços, arquitetura hexagonal, etc.), e incluem limites claros sobre como as partes do sistema se comunicam entre si (por exemplo, "a camada de apresentação não deve acessar diretamente o banco de dados").
 
-Trade-offs: é impossível maximizar todos os atributos simultaneamente (ex.: mais segurança pode reduzir desempenho).
-
-Estilos Arquiteturais:
-
-Monólito, Microsserviços, Serverless, Arquitetura Hexagonal, Event-Driven, etc.
-
-Design vs. Arquitetura:
-
-Arquitetura: visão ampla, decisões estruturais e tecnológicas.
-
-Design: detalhamento técnico da implementação.
+Trade-offs: Como é impossível maximizar todos os atributos não funcionais simultaneamente (por exemplo, aumentar a segurança pode reduzir o desempenho), o arquiteto de software precisa equilibrar cuidadosamente essas variáveis.
 
 --------------------------------------------------
+
 DevOps
 
-Cultura e conjunto de práticas que integram desenvolvimento (Dev) e operações (Ops) para entregar software com mais agilidade e qualidade.
+O DevOps é uma cultura e conjunto de práticas que visa integrar desenvolvimento (Dev) e operações (Ops) para entregar software de forma mais ágil e confiável. O ciclo DevOps inclui as etapas de planejamento, codificação, integração contínua (CI), testes, implantação, monitoramento e feedback.
 
-Ciclo DevOps: planejamento → codificação → integração contínua → testes → implantação → monitoramento → feedback.
-
-Benefícios:
-
+Benefícios do DevOps:
 Redução do tempo de entrega.
-
-Mais qualidade e confiabilidade.
-
+Aumento da qualidade e confiabilidade.
 Automação de builds, testes e deploys (CI/CD).
 
 --------------------------------------------------
+
 Comunicação Assíncrona
 
-Permite a interação entre serviços de forma desacoplada e não bloqueante.
+A comunicação assíncrona permite que serviços interajam de maneira desacoplada e não bloqueante, aumentando a escalabilidade e a flexibilidade do sistema.
 
-Padrão Publish/Subscribe (Tópicos):
+Publish/Subscribe (Tópicos): Um publisher envia mensagens para um broker, que as distribui para múltiplos subscribers. Essa abordagem permite alta escalabilidade e facilita a adição de novos consumidores.
 
-Um publisher envia mensagens para um broker, que as distribui para múltiplos subscribers.
-
-Alta escalabilidade e facilidade de adicionar novos consumidores.
-
-Ex.: RabbitMQ, Kafka, MQTT.
-
-Filas (Queue/FIFO):
-
-Mensagens processadas em ordem de chegada (First In, First Out).
-
-Comunicação ponto-a-ponto (1:1).
-
-Ex.: AWS SQS, Azure Service Bus.
-
-Fan-out: uma mensagem é copiada para vários consumidores em paralelo.
+Filas (Queue): Mensagens são processadas em ordem de chegada (First In, First Out - FIFO). A comunicação é ponto-a-ponto (1:1), e a fila atua como um buffer caso o receptor não esteja disponível.
 
 --------------------------------------------------
-Débito Técnico
 
-Compromissos ou atalhos tomados durante o desenvolvimento para ganhar velocidade, que geram custo futuro.
+CQRS (Command Query Responsibility Segregation)
 
-Causas: prazos curtos, falta de conhecimento, decisões arquiteturais ruins ou ausência de testes.
+CQRS é um padrão arquitetural que busca resolver problemas de escalabilidade e desempenho em sistemas de leitura e escrita, separando os modelos de leitura e escrita.
 
-Consequências:
+Benefícios:
 
-Mais bugs.
+Escalabilidade independente: A separação das operações de leitura e escrita permite que cada uma escale de maneira independente.
 
-Dificuldade de manutenção.
+Segurança: A separação de modelos de leitura e escrita facilita o controle de permissões.
 
-Necessidade de reescrita.
+Separação de preocupações: A lógica de leitura é otimizada para consultas, enquanto a lógica de escrita foca na integridade dos dados.
 
-Gestão: documentar débitos, priorizar refatorações e reservar tempo em sprints para reduzi-los.
+--------------------------------------------------
+
+Circuit Breaker
+
+O padrão Circuit Breaker é utilizado para proteger a comunicação entre sistemas, evitando que falhas em um serviço causem falhas em cascata em outros serviços. Ele possui três estados principais:
+
+Closed (Fechado): Comunicação funcionando normalmente.
+
+Open (Aberto): Quando ocorre uma falha, o circuito se abre e evita novas tentativas de comunicação.
+
+Half-Open (Meio Aberto): O sistema tenta restabelecer a comunicação, permitindo um número limitado de tentativas.
+
+Isso impede que o sistema entre em loops tentando reestabelecer a comunicação e consuma recursos de maneira ineficaz.

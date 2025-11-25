@@ -1,3 +1,5 @@
+MAIS INFORMAÇÕES NA PASTA "RESUMOS"
+
 # Design e Arquitetura de Software 1 - 2025/2 Turma A
 
 ## Repositório dos alunos
